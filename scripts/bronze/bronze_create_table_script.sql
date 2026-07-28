@@ -6,7 +6,7 @@ create table bronze.crm_cust_info (
 	cst_id INT,
 	cst_key VARCHAR(50),
 	cst_firstname VARCHAR(50),
-	cst_latname VARCHAR(50),
+	cst_lastname VARCHAR(50),
 	cst_material_status VARCHAR(50),
 	cst_gndr VARCHAR(50),
 	cst_create_date date 
@@ -26,7 +26,7 @@ create table bronze.crm_prd_info (
 );
 
 --create crm_sales_details
-DROP TABLE IF EXISTS bronze.crm_sales_details 
+DROP TABLE IF EXISTS bronze.crm_sales_details; 
 
 create table bronze.crm_sales_details (
 	sls_order_num VARCHAR(50),
@@ -44,7 +44,7 @@ create table bronze.crm_sales_details (
 
 --create table erp_cust_az12
 
-DROP TABLE IF EXISTS bronze.erp_cust_az12 
+DROP TABLE IF EXISTS bronze.erp_cust_az12;
 
 create table bronze.erp_cust_az12 (
 	cid VARCHAR(50),
@@ -53,7 +53,7 @@ create table bronze.erp_cust_az12 (
 );
 
 --create table erp_loc_a12
-DROP TABLE IF EXISTS bronze.erp_loc_a12 
+DROP TABLE IF EXISTS bronze.erp_loc_a12; 
 
 create table bronze.erp_loc_a12 (
 	cid VARCHAR(50),
@@ -61,7 +61,7 @@ create table bronze.erp_loc_a12 (
 );
 
 --create table erp_px_cat_g1v2
-DROP TABLE IF EXISTS bronze.erp_px_cat_g1v2 
+DROP TABLE IF EXISTS bronze.erp_px_cat_g1v2; 
 
 create table bronze.erp_px_cat_g1v2 (
 	id VARCHAR(50),

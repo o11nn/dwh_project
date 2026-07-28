@@ -7,7 +7,7 @@ DECLARE
 	ts_start_time timestamp;
 	ts_end_time timestamp;
 
-BEGIN
+BEGIN   
 	BEGIN
 		ts_start_time := clock_timestamp();
 		
@@ -33,7 +33,7 @@ BEGIN
 			);
 
 		ts_end_time := clock_timestamp();
-		RAISE NOTICE 'Duration time: duration=%', ts_end_bronze - ts_start_bronze;
+		RAISE NOTICE 'Duration time: duration=%', ts_end_time - ts_start_time;
 		
 		
 		
@@ -56,7 +56,7 @@ BEGIN
 			DELIMITER ','
 			);
 		ts_end_time := clock_timestamp();
-		RAISE NOTICE 'Duration time: duration=%', ts_end_bronze - ts_start_bronze;
+		RAISE NOTICE 'Duration time: duration=%', ts_end_time - ts_start_time;
 		
 		
 		
@@ -79,7 +79,7 @@ BEGIN
 			DELIMITER ','
 			);
 		ts_end_time := clock_timestamp();
-		RAISE NOTICE 'Duration time: duration=%', ts_end_bronze - ts_start_bronze;
+		RAISE NOTICE 'Duration time: duration=%', ts_end_time - ts_start_time;
 		
 		
 		RAISE NOTICE 'Loading ERP system';
@@ -107,7 +107,7 @@ BEGIN
 			DELIMITER ','
 			);
 		ts_end_time := clock_timestamp();
-		RAISE NOTICE 'Duration time: duration=%', ts_end_bronze - ts_start_bronze;
+		RAISE NOTICE 'Duration time: duration=%', ts_end_time - ts_start_time;
 		
 		
 		
@@ -130,7 +130,7 @@ BEGIN
 			DELIMITER ','
 			);
 		ts_end_time := clock_timestamp();
-		RAISE NOTICE 'Duration time: duration=%', ts_end_bronze - ts_start_bronze;
+		RAISE NOTICE 'Duration time: duration=%', ts_end_time - ts_start_time;
 		
 		
 		
@@ -155,7 +155,7 @@ BEGIN
 			);
 
 		ts_end_time := clock_timestamp();
-		RAISE NOTICE 'Duration time: duration=%', ts_end_bronze - ts_start_bronze;
+		RAISE NOTICE 'Duration time: duration=%', ts_end_time - ts_start_time;
 
 	EXCEPTION 
 		WHEN OTHERS THEN
@@ -164,7 +164,7 @@ BEGIN
 END;
 $$;
 
---CALL bronze.load_bronze();
+CALL bronze.load_bronze();
 
 
 
